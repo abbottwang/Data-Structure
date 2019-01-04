@@ -8,7 +8,7 @@ struct BSNode
 	BSNode(T t)
 	: value(t), lchild(nullptr), rchild(nullptr){}
 	
-	BSNode() = default;
+	BSNode() = default;//默认构造函数
 
 	T value;
 	BSNode<T>* lchild;
@@ -41,7 +41,7 @@ public:
 	void insert(T key);	//插入指定值节点
 	void remove(T key);	//删除指定值节点
 	void destory();		//销毁二叉树
-	void print();		//打印二叉树
+	void print() const;		//打印二叉树
 
 
 private:

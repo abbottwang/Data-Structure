@@ -20,16 +20,16 @@ int main()
 	t.insert(93);
 	t.insert(95);
 
-	cout << endl << "中序遍历：" << endl;
+	cout << endl << "inOrder "<< endl;
 	t.inOrder();
 
-	cout << "最大元素:" << t.search_maximum() << endl;
-	cout << "最小元素:" << t.search_minimun() << endl;
+	cout << "Maximum: " << t.search_maximum() << endl;
+	cout << "Minimum: " << t.search_minimun() << endl;
 
-	cout << "删除元素99" << endl;
+	cout << "delete 99 " << endl;
 	t.remove(99);
 
-	cout << "最大元素:" << t.search_maximum() << endl;
+	cout << "Maximum: " << t.search_maximum() << endl;
 
 	t.destory();
 

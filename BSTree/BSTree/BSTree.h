@@ -353,6 +353,7 @@ void BSTree<T>::destory(BSNode<T>* &p)
 		if (p->rchild != nullptr)
 			destory(p->rchild);
 		delete p;
+		//cout << "delete a node.\n";
 		p = nullptr;
 	}
 

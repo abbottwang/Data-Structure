@@ -4,35 +4,23 @@
 #include "stdafx.h"
 #include "BSTree.h"
 #include<iostream>
+#include<ctime>
 using namespace std;
 int main()
 {
-	BSTree<int> t;
-	t.insert(62);
-	t.insert(58);
-	t.insert(47);
-	t.insert(51);
-	t.insert(35);
-	t.insert(37);
-	t.insert(88);
-	t.insert(73);
-	t.insert(99);
-	t.insert(93);
-	t.insert(95);
+	srand(time(0));
+	BSTree<double> t;
+	int num = rand();
+	for (int i = 1; i <= 12; i++) {
+		t.insert(num);
+		num = rand();
+	}
 
 	cout << endl << "inOrder "<< endl;
 	t.inOrder();
 
 	cout << "Maximum: " << t.search_maximum() << endl;
 	cout << "Minimum: " << t.search_minimun() << endl;
-
-	cout << "delete 99 " << endl;
-	t.remove(99);
-
-	cout << "Maximum: " << t.search_maximum() << endl;
-
-	t.destory();
-
-	getchar();
+	
 	return 0;
 }
